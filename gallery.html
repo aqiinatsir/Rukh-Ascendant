@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rukh Server | Gallery</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin-top: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+            height: 250px;
+            background: rgba(20, 10, 35, 0.4);
+            position: relative;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(157, 78, 221, 0.2);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="glass">
+        <div class="logo-container">
+            <img src="rukh.jpeg" alt="Server Logo" id="nav-logo">
+            <span>RUKH SERVER</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="penjelasan.html">Penjelasan</a></li>
+                <li><a href="p2w.html">P2W / Store</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main>
+        <div class="store-header">
+            <h2>Gallery Server</h2>
+            <p>Momen dan screenshot menarik dari dalam dunia Rukh Server.</p>
+        </div>
+        <div class="gallery-container">
+            <!-- Ganti src dengan foto gallery Anda -->
+            <div class="gallery-item glass">
+                <img src="https://via.placeholder.com/600x400/1f083b/ffffff?text=Gallery+1" alt="Gallery 1">
+            </div>
+            <div class="gallery-item glass">
+                <img src="https://via.placeholder.com/600x400/1f083b/ffffff?text=Gallery+2" alt="Gallery 2">
+            </div>
+            <div class="gallery-item glass">
+                <img src="https://via.placeholder.com/600x400/1f083b/ffffff?text=Gallery+3" alt="Gallery 3">
+            </div>
+            <div class="gallery-item glass">
+                <img src="https://via.placeholder.com/600x400/1f083b/ffffff?text=Gallery+4" alt="Gallery 4">
+            </div>
+            <div class="gallery-item glass">
+                <img src="https://via.placeholder.com/600x400/1f083b/ffffff?text=Gallery+5" alt="Gallery 5">
+            </div>
+            <div class="gallery-item glass">
+                <img src="https://via.placeholder.com/600x400/1f083b/ffffff?text=Gallery+6" alt="Gallery 6">
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>

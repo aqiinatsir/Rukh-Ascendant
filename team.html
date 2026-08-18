@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rukh Server | Team</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+            margin-top: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+        .team-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .team-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(157, 78, 221, 0.15), transparent 40%);
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .team-card:hover::after {
+            opacity: 1;
+        }
+        .team-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(157, 78, 221, 0.2);
+        }
+        .team-card > * {
+            position: relative;
+            z-index: 2;
+        }
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px var(--primary-glow);
+            transition: transform 0.3s ease;
+        }
+        .team-card:hover .team-avatar {
+            transform: scale(1.05);
+        }
+        .team-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .team-role {
+            font-size: 0.95rem;
+            color: #e0aaff;
+            font-weight: 500;
+            background: rgba(157, 78, 221, 0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 1px solid rgba(157, 78, 221, 0.3);
+            display: inline-block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="glass">
+        <div class="logo-container">
+            <img src="rukh.jpeg" alt="Server Logo" id="nav-logo">
+            <span>RUKH SERVER</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="penjelasan.html">Penjelasan</a></li>
+                <li><a href="p2w.html">P2W / Store</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="team.html" class="active">Team</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main>
+        <div class="store-header">
+            <h2>Our Team</h2>
+            <p>Mengenal lebih dekat tim di balik Rukh Server.</p>
+        </div>
+        
+        <div class="team-container">
+            <!-- Owner -->
+            <div class="team-card glass">
+                <img src="https://ui-avatars.com/api/?name=YurooSlavia&background=5a189a&color=fff&size=200" alt="YurooSlavia" class="team-avatar">
+                <div class="team-name">YurooSlavia</div>
+                <div class="team-role">Owner Rukh Ascendant</div>
+            </div>
+
+            <!-- Admin -->
+            <div class="team-card glass">
+                <img src="https://ui-avatars.com/api/?name=Mayyo&background=7b2cbf&color=fff&size=200" alt="Mayyo" class="team-avatar">
+                <div class="team-name">Mayyo</div>
+                <div class="team-role">Admin Rukh Ascendant</div>
+            </div>
+            <div class="team-card glass">
+                <img src="https://ui-avatars.com/api/?name=Kaze&background=7b2cbf&color=fff&size=200" alt="Kaze" class="team-avatar">
+                <div class="team-name">Kaze</div>
+                <div class="team-role">Admin Rukh Ascendant</div>
+            </div>
+            <div class="team-card glass">
+                <img src="https://ui-avatars.com/api/?name=Yuno&background=7b2cbf&color=fff&size=200" alt="Yuno" class="team-avatar">
+                <div class="team-name">Yuno</div>
+                <div class="team-role">Admin Rukh Ascendant</div>
+            </div>
+            <div class="team-card glass">
+                <img src="https://ui-avatars.com/api/?name=VinsSnowy&background=7b2cbf&color=fff&size=200" alt="VinsSnowy" class="team-avatar">
+                <div class="team-name">VinsSnowy</div>
+                <div class="team-role">Admin Rukh Ascendant</div>
+            </div>
+            <div class="team-card glass">
+                <img src="https://ui-avatars.com/api/?name=Ram&background=7b2cbf&color=fff&size=200" alt="Ram" class="team-avatar">
+                <div class="team-name">Ram</div>
+                <div class="team-role">Admin Rukh Ascendant</div>
+            </div>
+
+            <!-- Dev -->
+            <div class="team-card glass">
+                <img src="https://ui-avatars.com/api/?name=Grezee+Dipan&background=9d4edd&color=fff&size=200" alt="Grezee Dipan" class="team-avatar">
+                <div class="team-name">Grezee Dipan</div>
+                <div class="team-role">Dev Rukh Ascendant</div>
+            </div>
+            <div class="team-card glass">
+                <img src="https://ui-avatars.com/api/?name=Piiwpiww&background=9d4edd&color=fff&size=200" alt="Piiwpiww" class="team-avatar">
+                <div class="team-name">Piiwpiww</div>
+                <div class="team-role">Dev Rukh Ascendant</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
