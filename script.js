@@ -95,4 +95,43 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.setProperty('--mouse-y', `${y}px`);
         });
     });
+
+    // Ripep Card Interaction - Floating Heart Effect
+    const ripepCards = document.querySelectorAll('.ripep-card');
+    ripepCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            if (e.target.closest('a') || e.target.closest('button')) return;
+            createFloatingHeart(e.clientX, e.clientY);
+        });
+    });
+
+    function createFloatingHeart(x, y) {
+        const heart = document.createElement('div');
+        // Using font-awesome heart icon
+        heart.innerHTML = '<i class="fa-solid fa-heart"></i>';
+        heart.style.position = 'fixed';
+        heart.style.left = x + 'px';
+        heart.style.top = y + 'px';
+        heart.style.color = '#ff4757';
+        heart.style.fontSize = '24px';
+        heart.style.pointerEvents = 'none';
+        heart.style.zIndex = '9999';
+        heart.style.transition = 'all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        heart.style.transform = 'translate(-50%, -50%) scale(1)';
+        heart.style.opacity = '1';
+        heart.style.textShadow = '0 0 15px rgba(255, 71, 87, 0.8)';
+        
+        document.body.appendChild(heart);
+        
+        // Trigger animation
+        setTimeout(() => {
+            heart.style.transform = `translate(-50%, -150px) scale(${Math.random() * 0.5 + 1.2})`;
+            heart.style.opacity = '0';
+        }, 10);
+        
+        // Remove element after animation
+        setTimeout(() => {
+            heart.remove();
+        }, 1000);
+    }
 });
