@@ -802,6 +802,30 @@ main {
     font-size: 2.5rem;
   }
 
+  /* Perbaikan tampilan P2W di layar HP (Responsive) */
+  .store-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .store-card {
+    padding: 20px 15px;
+  }
+
+  .item-name {
+    font-size: 1.3rem;
+  }
+
+  .item-price {
+    font-size: 1.5rem;
+  }
+
+  .card-badge {
+    right: -45px;
+    padding: 5px 45px;
+    font-size: 0.75rem;
+  }
+
   .buy-buttons {
     flex-direction: column;
   }
