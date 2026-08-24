@@ -788,27 +788,47 @@ main {
   bottom: 50px;
 }
 
-/* Ripep Tubuh Custom Styling */
-.ripep-card {
+/* Ripep Tubuh & Heart Shard Custom Styling */
+.ripep-card, .heart-shard-card {
   border: 1px solid rgba(255, 105, 135, 0.4);
   box-shadow: 0 0 20px rgba(255, 105, 135, 0.15);
   animation: heartbeat 2.5s infinite;
 }
 
-.ripep-card:hover {
+.ripep-card:hover, .heart-shard-card:hover {
   border-color: rgba(255, 105, 135, 0.8);
   box-shadow: 0 0 30px rgba(255, 105, 135, 0.4), 0 0 50px rgba(255, 105, 135, 0.2);
   animation: none;
   transform: translateY(-10px) scale(1.03);
 }
 
-.ripep-card .item-name {
+.ripep-card .item-name, .heart-shard-card .item-name {
   color: #ff6b81;
   text-shadow: 0 0 15px rgba(255, 107, 129, 0.5);
 }
 
-.ripep-card .item-price {
+.ripep-card .item-price, .heart-shard-card .item-price {
   color: #ff4757;
+}
+
+/* Rank Sejoli Custom Styling */
+.sejoli-card {
+  border: 1px solid rgba(255, 159, 67, 0.4);
+  box-shadow: 0 0 20px rgba(255, 159, 67, 0.15);
+}
+
+.sejoli-card:hover {
+  border-color: rgba(255, 159, 67, 0.8);
+  box-shadow: 0 0 30px rgba(255, 159, 67, 0.4), 0 0 50px rgba(255, 159, 67, 0.2);
+}
+
+.sejoli-card .item-name {
+  color: #ff9f43;
+  text-shadow: 0 0 15px rgba(255, 159, 67, 0.5);
+}
+
+.sejoli-card .item-price {
+  color: #feca57;
 }
 
 @keyframes heartbeat {
