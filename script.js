@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Ripep Card Interaction - Floating Heart Effect
-    const ripepCards = document.querySelectorAll('.ripep-card');
+    // Ripep & Heart Shard Card Interaction - Floating Heart Effect
+    const ripepCards = document.querySelectorAll('.ripep-card, .heart-shard-card');
     ripepCards.forEach(card => {
         card.addEventListener('click', function(e) {
             if (e.target.closest('a') || e.target.closest('button')) return;
